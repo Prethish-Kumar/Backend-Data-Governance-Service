@@ -1,10 +1,10 @@
 # Backend Data Governance Service — Report
 
-**Technologies**: Spring Boot, MongoDB, JUnit, Docker, Docker Compose
-**Author**: Prethish Kumar S
-**Date**: 2/11/2025
-**Github**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service
-**Postman Testing**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service/blob/main/Data%20Governance%20Service.postman_collection.json
+**Technologies**: Spring Boot, MongoDB, JUnit, Docker, Docker Compose  
+**Author**: Prethish Kumar S  
+**Date**: 2/11/2025  
+**Github**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service  
+**Postman Testing**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service/blob/main/Data%20Governance%20Service.postman_collection.json  
 
 ---
 
