@@ -135,7 +135,7 @@ This layered approach promotes separation of concerns and simplifies testing and
 
 ## 5. Implementation Details
 
-The service is implemented using Spring Boot 3.x and Spring Data MongoDB.
+The service is implemented using Spring Boot 3.5.7 and Spring Data MongoDB.
 Business logic is encapsulated within service classes, and each critical operation is unit tested using JUnit 5 and Mockito.
 
 ### Key Implementation Points
