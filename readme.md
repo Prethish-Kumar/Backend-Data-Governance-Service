@@ -1,7 +1,7 @@
 # Backend Data Governance Service — Report
 
-**Technologies**: Spring Boot, MongoDB, JUnit, Docker, Docker Compose \
-**Author**: Prethish Kumar S \
+**Technologies**: Spring Boot, MongoDB, JUnit, Docker, Docker Compose
+**Author**: Prethish Kumar S
 **Date**: 2/11/2025
 **Github**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service
 **Postman Testing**: https://github.com/Prethish-Kumar/Backend-Data-Governance-Service/blob/main/Data%20Governance%20Service.postman_collection.json
@@ -196,7 +196,7 @@ The service is fully containerized for consistent local and production deploymen
 
 ### Configuration
 
-**Dockerfile:** Builds the Spring Boot JAR and runs it with OpenJDK 17.\
+**Dockerfile:** Builds the Spring Boot JAR and runs it with OpenJDK 17.
 **docker-compose.yml:** Launches both the service and a MongoDB instance.
 
 ### To Run The Container :
@@ -230,6 +230,6 @@ Application exposed on port **8080**, MongoDB on **27017**.
 
 ## 9. Conclusion
 
-- The Data Governance Service successfully implements all required functionality defined in the PRD. \
-- It enforces data integrity, cascading deletions, and auditability while maintaining clean architecture and code quality standards. \
+- The Data Governance Service successfully implements all required functionality defined in the PRD.
+- It enforces data integrity, cascading deletions, and auditability while maintaining clean architecture and code quality standards.
 - The service is fully containerized, tested, and deployable with minimal setup effort.
