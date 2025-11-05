@@ -9,11 +9,16 @@ import com.complyance.Data_Governance_Service.repository.UserPreferenceRepositor
 import com.complyance.Data_Governance_Service.repository.UserRepository;
 import com.complyance.Data_Governance_Service.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserService {
@@ -56,6 +61,10 @@ public class UserService {
         user.setUpdatedAt(Instant.now());
         addAudit(user, "CREATE", "User account created");
         return repo.save(user);
+    }
+
+    public Page<UserProfile> getAllUsersPaged(Pageable pageable) {
+        return repo.findAllByDeletedFalse(pageable);
     }
 
     public UserProfile getUser(String id) {
@@ -128,5 +137,82 @@ public class UserService {
         addAudit(user, "HARD_DELETE", "User permanently deleted");
         repo.deleteById(id);
     }
+    @Transactional
+    public UserProfile patchUser(String id, UserProfile partialUpdate) {
+        UserProfile existing = repo.findByIdAndDeletedFalse(id)
+                .orElseThrow(() -> new NotFoundException("User not found or is deleted"));
 
+        StringBuilder changedFields = new StringBuilder();
+
+        if (partialUpdate.getName() != null && !partialUpdate.getName().equals(existing.getName())) {
+            existing.setName(partialUpdate.getName());
+            changedFields.append("name, ");
+        }
+
+        if (partialUpdate.getEmail() != null && !partialUpdate.getEmail().equals(existing.getEmail())) {
+            existing.setEmail(partialUpdate.getEmail());
+            changedFields.append("email, ");
+        }
+
+        if (partialUpdate.getUsername() != null && !partialUpdate.getUsername().equals(existing.getUsername())) {
+            existing.setUsername(partialUpdate.getUsername());
+            changedFields.append("username, ");
+        }
+
+        if (partialUpdate.getRoles() != null && !partialUpdate.getRoles().isEmpty()
+                && !partialUpdate.getRoles().equals(existing.getRoles())) {
+            existing.setRoles(partialUpdate.getRoles());
+            changedFields.append("roles, ");
+        }
+
+        existing.setUpdatedAt(Instant.now());
+
+        // 🧾 Add audit entry
+        String details = !changedFields.isEmpty()
+                ? "Updated fields: " + changedFields.substring(0, changedFields.length() - 2)
+                : "No fields changed";
+        addAudit(existing, "PATCH_UPDATE", details);
+
+        return repo.save(existing);
+    }
+
+    @Transactional
+    public UserProfile restoreUser(String id) {
+        UserProfile user = repo.findById(id)
+                .orElseThrow(() -> new NotFoundException("User not found"));
+
+        if (!user.isDeleted()) {
+            throw new ForbiddenException("User is not deleted — nothing to restore.");
+        }
+
+        // Check if still within grace period
+        long gracePeriodMillis = gracePeriodHours * 60 * 60 * 1000;
+        Instant deletedAt = user.getDeletedAt();
+
+        if (deletedAt == null || Instant.now().isAfter(deletedAt.plusMillis(gracePeriodMillis))) {
+            throw new ForbiddenException("Cannot restore — grace period has expired.");
+        }
+
+        // Restore user
+        user.setDeleted(false);
+        user.setDeletedAt(null);
+        user.setUpdatedAt(Instant.now());
+        addAudit(user, "RESTORE", "User restored from soft-deletion");
+
+        // Restore posts
+        postRepo.findByUserIdAndDeletedTrue(id).forEach(post -> {
+            post.setDeleted(false);
+            post.setDeletedAt(null);
+            postRepo.save(post);
+        });
+
+        // Restore preferences
+        prefRepo.findByUserId(id).ifPresent(pref -> {
+            pref.setDeleted(false);
+            pref.setDeletedAt(null);
+            prefRepo.save(pref);
+        });
+
+        return repo.save(user);
+    }
 }

@@ -6,10 +6,17 @@ import com.complyance.Data_Governance_Service.model.Post;
 import com.complyance.Data_Governance_Service.model.UserProfile;
 import com.complyance.Data_Governance_Service.repository.PostRepository;
 import com.complyance.Data_Governance_Service.repository.UserRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class PostService {
@@ -36,12 +43,36 @@ public class PostService {
         return postRepo.save(post);
     }
 
-    public List<Post> getPostsByUser(String userId) {
-        // Ensure user exists (404 if not)
+    public Object getPostsByUser(String userId, Integer page, Integer size, String sort) {
+        // Ensure user exists
         if (!userRepo.existsById(userId)) {
             throw new NotFoundException("User not found");
         }
 
+        // If pagination params provided
+        if (page != null && size != null) {
+            String[] sortParts = sort.split(",");
+            String sortBy = sortParts[0];
+            String sortDir = (sortParts.length > 1) ? sortParts[1] : "asc";
+
+            Sort sortObj = sortDir.equalsIgnoreCase("desc")
+                    ? Sort.by(sortBy).descending()
+                    : Sort.by(sortBy).ascending();
+
+            Pageable pageable = PageRequest.of(page, size, sortObj);
+            Page<Post> postPage = postRepo.findByUserIdAndDeletedFalse(userId, pageable);
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("posts", postPage.getContent());
+            response.put("currentPage", postPage.getNumber());
+            response.put("totalItems", postPage.getTotalElements());
+            response.put("totalPages", postPage.getTotalPages());
+            response.put("sort", sort);
+
+            return response;
+        }
+
+        // No pagination → return all
         return postRepo.findByUserIdAndDeletedFalse(userId);
     }
 
@@ -50,7 +81,7 @@ public class PostService {
         Post post = postRepo.findById(postId)
                 .orElseThrow(() -> new NotFoundException("Post not found"));
 
-        if (post.isDeleted()) return; // idempotent
+        if (post.isDeleted()) return;
 
         post.setDeleted(true);
         post.setDeletedAt(Instant.now());
