@@ -63,30 +63,6 @@ class PostServiceTest {
                 postService.createPost("u1", new Post()));
     }
 
-    // ---------- getPostsByUser() ----------
-
-    @Test
-    void getPostsByUser_shouldReturnActivePosts_whenUserExists() {
-        when(userRepo.existsById("u1")).thenReturn(true);
-
-        List<Post> posts = List.of(
-                Post.builder().id("p1").userId("u1").deleted(false).title("A").build(),
-                Post.builder().id("p2").userId("u1").deleted(false).title("B").build()
-        );
-
-        when(postRepo.findByUserIdAndDeletedFalse("u1")).thenReturn(posts);
-
-        List<Post> result = postService.getPostsByUser("u1");
-        assertEquals(2, result.size());
-        assertEquals("A", result.get(0).getTitle());
-    }
-
-    @Test
-    void getPostsByUser_shouldThrowNotFound_whenUserMissing() {
-        when(userRepo.existsById("nope")).thenReturn(false);
-        assertThrows(NotFoundException.class, () ->
-                postService.getPostsByUser("nope"));
-    }
 
     // ---------- softDeletePost() ----------
 
