@@ -110,10 +110,19 @@ public class UserService {
         if (updatedData.getRoles() != null && !updatedData.getRoles().isEmpty())
             existingUser.setRoles(updatedData.getRoles());
 
+        if (updatedData.getStatus() != null &&
+                !updatedData.getStatus().equalsIgnoreCase(existingUser.getStatus())) {
+            existingUser.setStatus(updatedData.getStatus());
+            addAudit(existingUser, "STATUS_UPDATE",
+                    "User status changed to " + updatedData.getStatus());
+        }
+
         existingUser.setUpdatedAt(Instant.now());
         addAudit(existingUser, "UPDATE", "User profile updated");
+
         return repo.save(existingUser);
     }
+
 
     @Transactional
     public void purgeUser(String id) {
@@ -165,6 +174,12 @@ public class UserService {
             changedFields.append("roles, ");
         }
 
+        // ✅ Handle status update
+        if (partialUpdate.getStatus() != null && !partialUpdate.getStatus().equals(existing.getStatus())) {
+            existing.setStatus(partialUpdate.getStatus());
+            changedFields.append("status, ");
+        }
+
         existing.setUpdatedAt(Instant.now());
 
         // 🧾 Add audit entry
@@ -175,6 +190,7 @@ public class UserService {
 
         return repo.save(existing);
     }
+
 
     @Transactional
     public UserProfile restoreUser(String id) {

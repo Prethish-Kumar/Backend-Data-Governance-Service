@@ -55,6 +55,7 @@ public class SeedService {
                     .email(email)
                     .name(name)
                     .roles(assignedRoles)
+                    .status("ACTIVE")
                     .createdAt(randomCreatedAt.plusSeconds(random.nextInt(3600)))
                     .updatedAt(Instant.now())
                     .auditTrail(List.of(
