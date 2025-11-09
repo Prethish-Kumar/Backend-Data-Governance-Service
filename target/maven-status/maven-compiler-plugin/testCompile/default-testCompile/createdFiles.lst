@@ -1,0 +1,5 @@
+com\complyance\Data_Governance_Service\service\UserPreferenceServiceTest.class
+com\complyance\Data_Governance_Service\service\UserServiceTest.class
+com\complyance\Data_Governance_Service\DataGovernanceServiceApplicationTests.class
+com\complyance\Data_Governance_Service\service\PostServiceTest.class
+com\complyance\Data_Governance_Service\TestLogger.class
