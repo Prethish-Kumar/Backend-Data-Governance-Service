@@ -36,7 +36,7 @@ public class UserProfile {
     private List<String> roles;
 
     @NotNull(message = "Status is required")
-    private String status;
+    private String status = "ACTIVE"; // ACTIVE, INACTIVE
 
     private boolean deleted = false;
     private Instant createdAt = Instant.now();

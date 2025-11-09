@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.101" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.135" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\Capta\AppData\Local\Temp\surefire18417125835285138591\surefirebooter-20251110040138724_3.jar C:\Users\Capta\AppData\Local\Temp\surefire18417125835285138591 2025-11-10T04-01-38_507-jvmRun1 surefire-20251110040138724_1tmp surefire_0-20251110040138724_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Capta\AppData\Local\Temp\surefire2967588849022792190\surefirebooter-20251110040846392_3.jar C:\Users\Capta\AppData\Local\Temp\surefire2967588849022792190 2025-11-10T04-08-45_652-jvmRun1 surefire-20251110040846392_1tmp surefire_0-20251110040846392_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\Assignment\Week 1\Data-Governance-Service\target\test-classes;E:\Assignment\Week 1\Data-Governance-Service\target\classes;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb\3.5.7\spring-boot-starter-data-mongodb-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.7\spring-boot-starter-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.7\spring-boot-autoconfigure-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.7\spring-boot-starter-logging-3.5.7.jar;C:\Users\Capta\.m2\repository\ch\qos\logback\logback-classic\1.5.20\logback-classic-1.5.20.jar;C:\Users\Capta\.m2\repository\ch\qos\logback\logback-core\1.5.20\logback-core-1.5.20.jar;C:\Users\Capta\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\Capta\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Capta\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\Capta\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Capta\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\Capta\.m2\repository\org\mongodb\mongodb-driver-sync\5.5.2\mongodb-driver-sync-5.5.2.jar;C:\Users\Capta\.m2\repository\org\mongodb\bson\5.5.2\bson-5.5.2.jar;C:\Users\Capta\.m2\repository\org\mongodb\mongodb-driver-core\5.5.2\mongodb-driver-core-5.5.2.jar;C:\Users\Capta\.m2\repository\org\mongodb\bson-record-codec\5.5.2\bson-record-codec-5.5.2.jar;C:\Users\Capta\.m2\repository\org\springframework\data\spring-data-mongodb\4.5.5\spring-data-mongodb-4.5.5.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-tx\6.2.12\spring-tx-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-context\6.2.12\spring-context-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-beans\6.2.12\spring-beans-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-expression\6.2.12\spring-expression-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\data\spring-data-commons\3.5.5\spring-data-commons-3.5.5.jar;C:\Users\Capta\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.7\spring-boot-starter-validation-3.5.7.jar;C:\Users\Capta\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.48\tomcat-embed-el-10.1.48.jar;C:\Users\Capta\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar;C:\Users\Capta\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Capta\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\Capta\.m2\repository\com\fasterxml\classmate\1.7.1\classmate-1.7.1.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.7\spring-boot-starter-web-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.7\spring-boot-starter-json-3.5.7.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.2\jackson-databind-2.19.2.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.2\jackson-annotations-2.19.2.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.2\jackson-core-2.19.2.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.2\jackson-datatype-jdk8-2.19.2.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.2\jackson-datatype-jsr310-2.19.2.jar;C:\Users\Capta\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.2\jackson-module-parameter-names-2.19.2.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.7\spring-boot-starter-tomcat-3.5.7.jar;C:\Users\Capta\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.48\tomcat-embed-core-10.1.48.jar;C:\Users\Capta\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.48\tomcat-embed-websocket-10.1.48.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-web\6.2.12\spring-web-6.2.12.jar;C:\Users\Capta\.m2\repository\io\micrometer\micrometer-observation\1.15.5\micrometer-observation-1.15.5.jar;C:\Users\Capta\.m2\repository\io\micrometer\micrometer-commons\1.15.5\micrometer-commons-1.15.5.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-webmvc\6.2.12\spring-webmvc-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-aop\6.2.12\spring-aop-6.2.12.jar;C:\Users\Capta\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.7\spring-boot-starter-test-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-test\3.5.7\spring-boot-test-3.5.7.jar;C:\Users\Capta\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.7\spring-boot-test-autoconfigure-3.5.7.jar;C:\Users\Capta\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Capta\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\Capta\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\Capta\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\Capta\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\Capta\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\Capta\.m2\repository\org\assertj\assertj-core\3.27.6\assertj-core-3.27.6.jar;C:\Users\Capta\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\Capta\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\Capta\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\Capta\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\Capta\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\Capta\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Capta\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\Capta\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Capta\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\Capta\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\Capta\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\Capta\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\Capta\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\Capta\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Capta\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\Capta\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Capta\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-core\6.2.12\spring-core-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-jcl\6.2.12\spring-jcl-6.2.12.jar;C:\Users\Capta\.m2\repository\org\springframework\spring-test\6.2.12\spring-test-6.2.12.jar;C:\Users\Capta\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\Capta\AppData\Local\Temp\surefire18417125835285138591\surefirebooter-20251110040138724_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Capta\AppData\Local\Temp\surefire2967588849022792190\surefirebooter-20251110040846392_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.2+12-54"/>
@@ -53,7 +53,7 @@
     <property name="user.dir" value="E:\Assignment\Week 1\Data-Governance-Service"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="8452"/>
+    <property name="PID" value="1424"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -66,7 +66,7 @@
     <property name="java.class.version" value="68.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[Data-Governance-Service] "/>
   </properties>
-  <testcase name="getPreferences_shouldReturnActivePrefs_whenExists" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.057">
+  <testcase name="getPreferences_shouldReturnActivePrefs_whenExists" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.066">
     <system-out><![CDATA[🧪 Running Test: getPreferences_shouldReturnActivePrefs_whenExists()
 ✅ Test Passed: getPreferences_shouldReturnActivePrefs_whenExists()
 
@@ -84,55 +84,55 @@
 
 ]]></system-out>
   </testcase>
-  <testcase name="updatePreferences_shouldUpdateExisting_whenActivePref" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="updatePreferences_shouldUpdateExisting_whenActivePref" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.005">
     <system-out><![CDATA[🧪 Running Test: updatePreferences_shouldUpdateExisting_whenActivePref()
 ✅ Test Passed: updatePreferences_shouldUpdateExisting_whenActivePref()
 
 ]]></system-out>
   </testcase>
-  <testcase name="getPreferences_shouldThrowNotFound_whenUserMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="getPreferences_shouldThrowNotFound_whenUserMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.004">
     <system-out><![CDATA[🧪 Running Test: getPreferences_shouldThrowNotFound_whenUserMissing()
 ✅ Test Passed: getPreferences_shouldThrowNotFound_whenUserMissing()
 
 ]]></system-out>
   </testcase>
-  <testcase name="softDeletePreferences_shouldDoNothing_whenAlreadyDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.002">
+  <testcase name="softDeletePreferences_shouldDoNothing_whenAlreadyDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.005">
     <system-out><![CDATA[🧪 Running Test: softDeletePreferences_shouldDoNothing_whenAlreadyDeleted()
 ✅ Test Passed: softDeletePreferences_shouldDoNothing_whenAlreadyDeleted()
 
 ]]></system-out>
   </testcase>
-  <testcase name="updatePreferences_shouldThrowForbidden_whenUserDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="updatePreferences_shouldThrowForbidden_whenUserDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.004">
     <system-out><![CDATA[🧪 Running Test: updatePreferences_shouldThrowForbidden_whenUserDeleted()
 ✅ Test Passed: updatePreferences_shouldThrowForbidden_whenUserDeleted()
 
 ]]></system-out>
   </testcase>
-  <testcase name="softDeletePreferences_shouldThrowNotFound_whenMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="softDeletePreferences_shouldThrowNotFound_whenMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.007">
     <system-out><![CDATA[🧪 Running Test: softDeletePreferences_shouldThrowNotFound_whenMissing()
 ✅ Test Passed: softDeletePreferences_shouldThrowNotFound_whenMissing()
 
 ]]></system-out>
   </testcase>
-  <testcase name="getPreferences_shouldThrowForbidden_whenPrefDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="getPreferences_shouldThrowForbidden_whenPrefDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.007">
     <system-out><![CDATA[🧪 Running Test: getPreferences_shouldThrowForbidden_whenPrefDeleted()
 ✅ Test Passed: getPreferences_shouldThrowForbidden_whenPrefDeleted()
 
 ]]></system-out>
   </testcase>
-  <testcase name="softDeletePreferences_shouldMarkAsDeleted_whenActive" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.002">
+  <testcase name="softDeletePreferences_shouldMarkAsDeleted_whenActive" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.004">
     <system-out><![CDATA[🧪 Running Test: softDeletePreferences_shouldMarkAsDeleted_whenActive()
 ✅ Test Passed: softDeletePreferences_shouldMarkAsDeleted_whenActive()
 
 ]]></system-out>
   </testcase>
-  <testcase name="getPreferences_shouldThrowNotFound_whenPrefMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="getPreferences_shouldThrowNotFound_whenPrefMissing" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.004">
     <system-out><![CDATA[🧪 Running Test: getPreferences_shouldThrowNotFound_whenPrefMissing()
 ✅ Test Passed: getPreferences_shouldThrowNotFound_whenPrefMissing()
 
 ]]></system-out>
   </testcase>
-  <testcase name="updatePreferences_shouldThrowForbidden_whenPrefDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.003">
+  <testcase name="updatePreferences_shouldThrowForbidden_whenPrefDeleted" classname="com.complyance.Data_Governance_Service.service.UserPreferenceServiceTest" time="0.008">
     <system-out><![CDATA[🧪 Running Test: updatePreferences_shouldThrowForbidden_whenPrefDeleted()
 ✅ Test Passed: updatePreferences_shouldThrowForbidden_whenPrefDeleted()
 
