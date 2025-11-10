@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.complyance.Data_Governance_Service.DataGovernanceServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.784 s -- in com.complyance.Data_Governance_Service.DataGovernanceServiceApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.841 s -- in com.complyance.Data_Governance_Service.DataGovernanceServiceApplicationTests
